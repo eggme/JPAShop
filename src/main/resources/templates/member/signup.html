@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 가입</title>
+    <th:block layout:fragment="css">
+        <link th:href="@{/css/signup.css}" rel="stylesheet" type="text/css">
+    </th:block>
+</head>
+<body>
+<div layout:fragment="content" class="content_main_wrap">
+    <div class="content_wrap">
+        <div class="main_title">회원 가입</div>
+        <div class="main_content">
+            <form action="/member/createMember" method="post">
+                <div class="input_cell_box">
+                    <div class="cell_title">이름</div>
+                    <div class="cell_input">
+                        <input type="text" name="name" placeholder="이름을 입력하세요"/>
+                    </div>
+                </div>
+                <div class="input_cell_box">
+                    <div class="cell_title">주소</div>
+                    <div class="cell_input">
+                        <input type="text" name="city" placeholder="이름을 입력하세요"/>
+                    </div>
+                </div>
+                <div class="input_cell_box">
+                    <div class="cell_title">상세주소</div>
+                    <div class="cell_input">
+                        <input type="text" name="street" placeholder="이름을 입력하세요"/>
+                    </div>
+                </div>
+                <div class="input_cell_box">
+                    <div class="cell_title">우편번호</div>
+                    <div class="cell_input">
+                        <input type="text" name="zipcode" placeholder="이름을 입력하세요"/>
+                    </div>
+                </div>
+                <div class="button_box">
+                    <div class="submit_button">
+                        <input type="submit" value="회원가입">
+                    </div>
+                    <div class="cancel_button">
+                        <input type="reset" value="취소">
+                    </div>
+                    <div class="back_button">
+                        <button onclick="history.back()">뒤로가기</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

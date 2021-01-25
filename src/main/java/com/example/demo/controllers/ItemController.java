@@ -60,6 +60,6 @@ public class ItemController {
     /** 타임리프 css 테스트용  */
     @GetMapping("/fragments/head")
     public String test(){
-        return "/fragments/head";
+        return "commonHead";
     }
 }

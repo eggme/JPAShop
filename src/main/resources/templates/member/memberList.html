@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="layout/default_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block>
+        <link th:href="@{/css/memberList.css}" rel="stylesheet" type="text/css" />
+    </th:block>
+</head>
+<body>
+    <div layout:fragment="content" class="content_main_wrap">
+        <div class="content_wrap">
+            <div class="main_title">회원 목록</div>
+            <div class="main_content">
+                <table class="main_table">
+                    <tr>
+                        <th>회원번호</th>
+                        <th>회원명</th>
+                        <th>주소</th>
+                        <th>상세주소</th>
+                        <th>우편번호</th>
+                    </tr>
+                    <tr th:each="member : ${members}">
+                        <td><span th:text="${member.id}">1</span></td>
+                        <td><span th:text="${member.name}">1</span></td>
+                        <td><span th:text="${member.address.city}">1</span></td>
+                        <td><span th:text="${member.address.street}">1</span></td>
+                        <td><span th:text="${member.address.zipcode}">1</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+.content_wrap{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.main_title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #4c4c4c;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+.main_content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.input_cell_box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.cell_title{
+    color: #4c4c4c;
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.cell_input input{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #dedede;
+    height: 40px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 8px;
+}
+.button_box{
+    display: flex;
+}
+.button_box div{
+    margin-right: 8px;
+}
+.button_box div input, .button_box div button{
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: 0px;
+    border-radius: 8px;
+}
+.submit_button input{
+    color: white;
+    background-color: #467f89;
+}

@@ -1,0 +1,28 @@
+.content_wrap{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 600px;
+    margin: 0 auto;
+}
+.main_title{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.main_table{
+    width: 100%;
+    font-size: 18px;
+}
+
+.main_table th, .main_table tr td {
+    text-align: center;
+    padding : 12px 0;
+}
+.main_table tr:first-child{background-color: #8e8e8e; color: white}
+
+.main_table tr:nth-child(2n){
+    background-color: #e3e3e3;
+}

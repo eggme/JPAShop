@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">JPA SHOP</title>
+    <th:block th:replace="fragment/config :: configFragment" ></th:block>
+    <th:block>
+        <link th:href="@{/css/default_css.css}" type="text/css" rel="stylesheet"/>
+    </th:block>
+</head>
+<body>
+    <div class="flex_wrap">
+        <th:block th:replace="fragment/header :: headerFragment" class="layout_header"></th:block>
+
+        <th:block layout:fragment="content" class="layout_content"></th:block>
+
+        <th:block th:replace="fragment/footer :: footerFragment" class="layout_footer"> </th:block>
+    </div>
+</body>
+</html>

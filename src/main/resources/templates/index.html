@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>홈</title>
+    <th:block layout:fragment="css">
+        <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+    </th:block>
+    <script type="text/javascript">
+        $(function () {
+            $('.menu_button').on("click", function () {
+                location.href = $(this).attr('data-value');
+            });
+        });
+    </script>
 </head>
 <body>
-<div th:include="/fragments/head :: header"></div>
-
-<h1>Hello!</h1>
+<div layout:fragment="content" class="content_main_wrap">
+    <div class="content_wrap">
+        <div class="content_title">HELLO SHOP</div>
+        <div class="function_list">
+            <div class="member_function">
+                <div class="menu_title">회원 기능</div>
+                <div class="menu_button_wrap">
+                    <div class="menu_button" data-value="/member/signup">회원 가입</div>
+                    <div class="menu_button" data-value="/member/list">회원 목록</div>
+                </div>
+            </div>
+            <div class="member_function">
+                <div class="menu_title">상품 기능</div>
+                <div class="menu_button_wrap">
+                    <div class="menu_button" data-value="/item">상품 등록</div>
+                    <div class="menu_button" data-value="/item/list">상품 목록</div>
+                </div>
+            </div>
+            <div class="member_function">
+                <div class="menu_title">주문 기능</div>
+                <div class="menu_button_wrap">
+                    <div class="menu_button" data-value="/order">상품 주문</div>
+                    <div class="menu_button" data-value="/order/history">주문 내역</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
